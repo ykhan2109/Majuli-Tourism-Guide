@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="shortcut icon" href="assets/img/ic2.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* styles.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #031d1a;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0; /* Ensures the header is at the top of the page */
+}
+.nav__logo, .nav__toggle {
+  color:rgb(255, 255, 255);
+}
+
+.nav__logo {
+  font-weight: var(--font-semi-bold);
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav__logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 20px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Adjusted for fixed header */
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 60px; /* Adjusted for fixed header */
+    left: 0;
+    background-color: #031d1a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left .5s;
+    margin-left: 0;
+    margin-top: 20px; /* Adjusted for fixed header */
+}
+
+.footer {
+    background-color:#031d1a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+    
+    <title>মাজুলী</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Majuli Tourism</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="satra.html" class="nav__link active-link">Satra</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <button class="openbtn" onclick="toggleSidebar()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+            <a href="samuguri.html">Sri Sri Samuguri Satra</a><hr>
+            <a href="gamur.html">Sri Sri Garmur Satra</a><hr>
+            <a href="auniati.html">Sri Sri Auniati Satra</a><hr>
+            <a href="kamalabari.html">Sri Sri Uttar Kamalabari Satra</a><hr>
+            <a href="dakhinpat.html">Sri Sri Dakhinpat Satra</a><hr>
+            <a href="bhogpur.html">Sri Sri Bhogpur Satra</a><hr>
+            <a href="bengena.html">Sri Sri Bengena Ati Satra</a><hr>
+        </aside>
+
+        <main class="main-content" id="main">
+            <p style="font-size: large;">
+                <img src="pages.html\img\s3.png" width="400" height="250" alt="Bhogpur satra, Majuli satra photo" title="Bhogpur satra in Majuli island" style="float: right; margin-left: 20px;">
+                <b style="font-size: large;">Sri Sri Bhogpur Satra</b>:Sri Sri Bhogpur Satra is one of the several ancient Sattras of Assam.Sri Sri Bhogpur Satra is situated in the heart of Majuli, the largest river island of the world, and is located near the Tuni river which is also known as "Bashistha Ganga". The Satra is about four kilometres away from Kamalabari, on the northern side of the Majuli PWD Road. Majuli itself is a sub-division under Jorhat district,and the Satra is exactly located in the Kamalabari Mauza.<br>
+
+                The Sattradhikar is solely responsible for all and any affairs pertaining to the day-to-day running as well as the development of the Satra.By way of customary practice and tradition, the Satradhikar may adopt any young boy of his same caste for becoming the future Satradhikar.At present the total number of Bhakatas or disciples of the Satra stands at 115. The Satradhikar has set up a managing committee for smooth running of the Satra affairs.<br>
+                
+                Regular fourteen prasanga are performed. Holi, Janmastami, Raas, are celebrated. Commemoration function of Srimanta Shankaradeva is observed.<br>
+                <br>
+                <p style="font-size: large;"><b>HISTORY:</b></p>
+                <br>
+                <p style="font-size: large;">The place where the Bhogpur Satra is now situated was formerly known as Dinapura after the name of Dinanath Bharali Baruah, a reputed gentry belonging to the bureaucratic services of the Ahom rulers of Assam. When Srimanta Sankardev left Bardowa and set off to propagate his teachings all over the region, he also passed through places like Komorakata, Bhalukaguri. Gangmau. etc. to finally land up at Dhuwahat Belaguri of lower Majuli. On hearing the news of his arrival, Dinanath Baruah went to see Srimanta Sankardev and prayed for permitting him to become his disciple. Srimanta Sankardev was highly pleased with his devotion and not only immediately made him a disciple but even gifted him a booklet called "Prahlad Charita".<br>
+                
+                Srimanta Sankardev was initially not in the good books of the Ahom rulers and was even facing various charges, and it was around that time that Swargadeu Swarganarayana (the then Ahom king) asked Srimanta Sankardev to prove his innocence in his palace on Rangpur. On receipt of this information, Srimanta Sankardev started off with several of his disciples for Rangpur, the capital,taking the river route through Tuni. On his way one evening he arrived at Dinapur. He wanted to stay that night in that place. On hearing about the arrival of Srimanta Sankardev there, every resident of the locality rushed to him to offer their devotion and obeisance towards the great saint. They made the best of their arrangements to respect their guru. Incidentally, the place was not only endowed with natural beauty but was also a very flourishing area, abundant with every necessity of life. Srimanta Sankardev was given a rousing welcome by the villagers which highly pleased him. On noticing that the area was a flourishing one, Srimanta Sankardev named the place Bhogpur. He also said that in due time Bhogpur would become a famous place and would be the centre of his religion and would be headed by a popular disciple of his who would render services to the common people selflessly.<br>
+                
+                Burha Damodar was the first Dharmacharyya of Bhogpur and was the closest colleague of Keshaw Charana. For the necessity of conducting Nam-Prasanga, preaching of religion and other activities there immediately arose the need of a Dharmacharyya. And it was Bharali Baruah who took upon himself the task of locating such a personality to finally find him and ask him from Keshav Charana. Bharali Baruah invited Burha Damodar and entitled him as the first Satradhikar according to the traditions of that time by arranging for him the necessary decrees from the king including issuance of a 'Tamra Patra'. As a symbol of recognition Bharali Baruah also gave a Bartop (cannon), a Heng-dang (a replica of the royal sword), two thousand puras of land, etc.to the newly established Satra. With the patronage of Ahom king soon coming in, the Satra had a rather good foundation, keeping in tune with the best traditions of the time. Since then, the Satra has been carrying ahead the rich Assamese tradition and cultural heritage by holding for itself a highly distinguished position in the sacred task of propagation of Dharma and spreading culture and education.<br>
+                
+                Apart from the above books and manuscripts, there are a large number of monuments and artifacts in the Satra which have been part of the rich heritage of the state. These include a statue of Vishnu as also a large number of different kinds of vessels dating back to several hundred years.<br>
+                
+                The Satra has been performing its duty of propagation of the Dharma as well as Satriya art and culture putting up the best possible efforts despite various constraints as also keeping in tune with the changing needs of time.<br>
+            </p>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&#169; 2024 Majuli Tourism. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var mainContent = document.getElementById("main");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                mainContent.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                mainContent.style.marginLeft = "250px";
+            }
+        }
+
+        
+        const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+    </script>
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

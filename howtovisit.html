@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="shortcut icon" href="assets/img/ic2.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* styles.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #031d1a;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0; /* Ensures the header is at the top of the page */
+}
+.nav__logo, .nav__toggle {
+  color:rgb(255, 255, 255);
+}
+
+.nav__logo {
+  font-weight: var(--font-semi-bold);
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav__logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 20px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Adjusted for fixed header */
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 60px; /* Adjusted for fixed header */
+    left: 0;
+    background-color: #031d1a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left .5s;
+    margin-left: 0;
+    margin-top: 20px; /* Adjusted for fixed header */
+}
+
+.footer {
+    background-color: #031d1a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+     <title>মাজুলী</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Majuli Tourism</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link active-link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="satra.html" class="nav__link">Satra</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <button class="openbtn" onclick="toggleSidebar()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+            <a href="whytovisit.html">Why to visit?</a><hr>
+            <a href="howtovisit.html">How to visit?</a><hr>
+            <a href="history.html">History</a><hr>
+            <a href="maskmaking.html">Mask making Culture</a><hr>
+            <a href="culture.html">Culture an Demography</a><hr>
+            <a href="conference.html">International Conferences</a><hr>
+            <a href="festival.html">Celebrate various festivals</a><hr>
+            </aside>
+        <main class="main-content" id="main">
+            <h1><b>How to reach :</b></h1>
+            <hr></hr><br>
+            <p>
+                Majuli is well connected with Jorhat and Lakhimpur district of Assam. You need to board a Ferry to reach Majuli island from Jorhat town. Nimatighat is the nearest port situated in Jorhat district, it takes 1.00 hr to reach Majuli from Nimatighat. Ferry service is available from 7 am to 3.30 pm. Jorhat also serves as the nearest road connection from Majuli. On daily basis, you can avail the ASTC buses within the state. There are several day as well as night deluxe buses from Guwahati to Jorhat in the interval of seven hours.
+You can also reach Majuli from Lakhimpur district by road via Dhakuakhana.<br>
+
+<b>By Train</b> There are no railway stations in Majuli. To reach Majuli by train, tourists will have to take trains from Guwahati to reach Jorhat , the nearest railhead to Majuli. From Jorhat, buses and taxis will transport tourists to Neemati Ghat where ferries are available for a ride to Majuli.<br>
+
+<b>By Air: </b>There are frequent flights to Jorhat from Guwahati, as well as other parts of the country, especially the eastern zone. There are four flights in a week from Kolkata to Jorhat too. From Jorhat, take private bus to the Neemati Ghat. Tourists can also book a taxi from Jorhat, and take it on the ferry. Also there is an airport named Lilabari Airport in North Lakhimpur and from there Majuli can also be reached via Dhakuakhana.<br>
+
+<b>Weather:</b> The island of Majuli enjoys a sub-tropical monsoon climate, as is found in the other parts of Assam. The climatic conditions prevalent here are similar to that in the northeastern zones of India, Nepal. Summers are usually hot and have extreme humidity. The average annual rainfall in the area is around 215 cm. All the major festivals in the island are held in the winter season, when it is cool and pleasant. In fact, the best time to visit Majuli is from October to March. Let us get some more information on the weather & climate of Majuli.<br>
+
+       <p><b>Summer:</b></p><br>
+
+The summer season in Majuli is from March to July and is quite hot and humid. During these times, the temperature may even peak to 34oC. Tourists prefer to stay away from the season around this time.<br>
+
+       <p><b>Monsoon:</b></p><br>
+The monsoon season in Majuli starts around July and lasts till August, after which the post-monsoon season follows. During this time,the entire island gets covered in the beautiful green cloak.<br>
+<p><b>Winter:</b></p>
+The winter season, on the other hand, starts from November and lasts till February. The average temperature during the season is around 7oC to 18oC. It is during this season that the Majulians engage themselves in various cultural activities. This is the season when the various fests and fairs in the region are celebrated.
+            </p>
+          
+                        
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&#169; 2024 Majuli Tourism. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var mainContent = document.getElementById("main");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                mainContent.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                mainContent.style.marginLeft = "250px";
+            }
+        }
+        const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+    </script>
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
